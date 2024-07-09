@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Example application</title>
+  </head>
+  <body>
+    <a href="/users">Пользователи</a>
+    <!-- BEGIN (write your solution here) -->
+    <table>
+      <tr>
+        <td>{{ user['id']|e }}</td>
+        <td>{{ user['first_name']|e }}</td>
+        <td>{{ user['last_name']|e }}</td>
+        <td>{{ user['email']|e }}</td>
+      </tr>
+    </table>
+    <!-- END -->
+  </body>
+</html>
+
+<!-- решение ментора -->
+<!-- BEGIN
+    {% for key, value in user.items() %}
+      <div>
+        {{ key }}: {{ value }}
+      </div>
+    {% endfor %}
+END -->

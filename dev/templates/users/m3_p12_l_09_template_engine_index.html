@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Example application</title>
+  </head>
+  <body>
+    <!-- BEGIN (write your solution here) -->
+    <table>
+      {% for ind in users %}
+        <tr>
+          <td>{{ ind['id']|e }}</td>
+          <td>
+            <a href="/users/{{ ind['id']|e }}">{{ ind['first_name']|e }}</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </table>
+    <!-- END -->
+  </body>
+</html>
+
+<!-- решение ментора -->
+<!-- BEGIN
+    <table>
+    {% for user in users %}
+      <tr>
+        <td>
+          {{ user['id'] }}
+        </td>
+        <td>
+          <a href="/users/{{ user['id'] }}">{{ user['first_name'] }}</a>
+        </td>
+      </tr>
+    {% endfor %}
+    </table>
+END -->
