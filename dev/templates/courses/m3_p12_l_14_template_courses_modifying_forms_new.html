@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Example application</title>
+  </head>
+  <body>
+<!-- BEGIN (write your solution here) -->
+		{% if errors %}
+		  <h2>Ошибки:</h2>
+      {% for error in errors %}
+        {% if error == 'title' %}
+          <p>Имя курс: "{{ errors[error]|e }}"</p>
+        {% else %}
+          <p>Платность курса: "{{ errors[error]|e }}"</p>
+        {% endif %}
+      {% endfor %}
+		{% endif %}
+    <form action="/courses" method="post">
+      <div>
+        <label>
+          Курс
+          <input type="text" name="title" value="{{ courses['title'] }}">
+        </label>
+      </div>
+      <div>
+        <label>
+          Платный курс
+          <input type="text" name="paid" value="{{ courses['paid'] }}">
+        </label>
+      </div>
+      <div>
+        <input type="submit" value="Sign Up">
+      </div>
+    </form>
+<!-- END -->
+  </body>
+</html>
+
+
+<!--
+решение ментора
+<form action="/courses" method="post">
+    <div>
+        <label>
+          Title *
+        <input type="text" name="title" value="{{ course.title }}">
+        </label>
+        {% if errors['title'] %}
+        <div>{{ errors['title'] }}</div>
+        {% endif %}
+    </div>
+    <div>
+      <label>
+        Paid *
+        <select name="paid">
+          <option value="">Select</option>
+          <option {{ 'selected' if course.paid =='1' else '' }} value="1">Paid</option>
+          <option {{ 'selected' if course.paid =='0' else '' }} value="0">Free</option>
+        </select>
+        </label>
+        {% if errors['paid'] %}
+        <div>{{ errors['paid'] }}</div>
+        {% endif %}
+    </div>
+    <input type="submit" value="Create">
+  </form> 
+ -->

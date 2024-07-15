@@ -627,6 +627,23 @@ socks = ["pysocks (>=1.5.6,!=1.5.7,<2.0)"]
 zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
+name = "validation"
+version = "0.8.3"
+description = "A library for runtime type checking and validation of python values"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+files = [
+    {file = "validation-0.8.3.tar.gz", hash = "sha256:c4aed7dd548b5ad3ba12306cda7322658490e22dedef29295fdb8692b1b4fe3a"},
+]
+
+[package.dependencies]
+six = ">=1.10,<2"
+
+[package.extras]
+email = ["idna (>=2.0.0)"]
+test = ["idna", "pytz"]
+
+[[package]]
 name = "werkzeug"
 version = "3.0.3"
 description = "The comprehensive WSGI web application library."
@@ -646,4 +663,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "9575c1ada24d161dc7380195579271b4c9f4f50c4dd9470d2dcaac5b8e16dd81"
+content-hash = "584c81077a48e727fd56ed64ad890193388b402dbc3f389195abae8fd80f37a5"
