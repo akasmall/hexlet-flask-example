@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+    <title>Example application</title>
+    </head>
+    <body>
+        <form action="/courses" method="post">
+            <input type="submit" value="Create Course">
+        </form>
+    <!-- BEGIN (write your solution here) -->
+        {% if messages %}
+        <ul>
+        {% for category, message in messages %}
+            <li"{{ category }}">{{ message }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    <!-- END -->
+
+    </body>
+</html>
+
+
