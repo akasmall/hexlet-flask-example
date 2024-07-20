@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Example application</title>
+  </head>
+  <body>
+<!-- BEGIN (write your solution here) -->
+    {% if items %}
+      {% for item in items %}
+        <a href="/posts/{{item['slug']}}">{{item['title']}}</br></a>
+      {% endfor %}
+      </br>
+      <a href="/posts?page={{page - 1}}">Назад</a>
+      <a href="/posts?page={{page + 1}}">Вперед</a>
+    {% endif %}
+    <!-- END -->
+  </body>
+</html>
