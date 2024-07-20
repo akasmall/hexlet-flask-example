@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Example application</title>
+  </head>
+  <body>
+<!-- BEGIN (write your solution here) -->
+    {% if items %}
+      {% for item in items %}
+        <a href="{{test}}">{{item['title']}}</br></a>
+      {% endfor %}
+      </br>
+      <table>
+        <tr>
+          <td>
+            <form action="/posts" method="get">
+                <input type="hidden" name="page" value="{{ page - 1 }}">
+                <input type="submit" value="Назад">
+            </form>
+          </td>
+          <td>
+            <form action="/posts" method="get">
+                <input type="hidden" name="page" value="{{ page + 1 }}">
+                <input type="submit" value="Вперед">
+            </form>
+          </td>
+        </tr>
+      </table>
+    {% endif %}
+    <!-- END -->
+  </body>
+</html>
