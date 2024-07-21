@@ -13,7 +13,7 @@ from dev.m3_p12_l_18_template_crud_create_repository import PostsRepository
 from dev.m3_p12_l_18_template_crud_create_validator import validate
 
 
-app = Flask(__name__)
+# app = Flask(__name__)
 # Загрузка переменных окружения из .env файла
 app = Flask(__name__)
 load_dotenv()
