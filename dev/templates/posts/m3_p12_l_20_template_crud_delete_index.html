@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Example application</title>
+</head>
+
+<body>
+    <a href="/posts/new">Create post</a>
+
+    {% if messages %}
+    <ul>
+        {% for category, message in messages %}
+        <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <ul>
+        {% for post in posts %}
+        <li>
+            "{{ post['title'] }}"
+            <div>
+                <a href="{{ url_for('post_update', id_=post['id']) }}">Edit</a>
+                <!-- BEGIN (write your solution here) -->
+                </br></br>
+                <form action="{{ url_for('delete_post', id_=post['id']) }}" method="post">
+                    <input type="submit" value="Remove">
+                </form>
+                </br>
+                <!-- END -->
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

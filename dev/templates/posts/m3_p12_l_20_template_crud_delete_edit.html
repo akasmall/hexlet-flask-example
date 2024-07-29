@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Example application</title>
+</head>
+
+<body>
+    <a href="{{ url_for('posts_get') }}">Посты</a>
+    <form action="{{ url_for('post_update', id=post.id) }}" method="post">
+        {% include "posts/form.html" %}
+        <input type="submit" value="Update">
+    </form>
+</body>
+
+</html>
