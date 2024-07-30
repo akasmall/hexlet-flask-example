@@ -10,8 +10,8 @@ from flask import (
     url_for,
 )
 
-from dev.m3_p12_l_20_template_crud_delete_repository import PostsRepository
-from dev.m3_p12_l_20_template_crud_delete_validator import validate
+from dev.m3_p12_l_20_crud_delete_repository import PostsRepository
+from dev.m3_p12_l_20_crud_delete_validator import validate
 # from flask import session
 
 app = Flask(__name__)

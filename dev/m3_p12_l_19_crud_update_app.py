@@ -13,8 +13,8 @@ from flask import (
     url_for,
 )
 # from flask import session
-from dev.m3_p12_l_19_template_crud_update_repository import PostsRepository
-from dev.m3_p12_l_19_template_crud_update_validator import validate
+from dev.m3_p12_l_19_crud_update_repository import PostsRepository
+from dev.m3_p12_l_19_crud_update_validator import validate
 
 # Путь к файлу, где будут храниться посты
 POSTS_FILE = 'dev/posts.json'
@@ -195,8 +195,8 @@ def post_update(id_):
 # *в шаблон form.html, подключите его по аналогии
 # *с templates / posts / new.html.
 # !Подсказки
-# TODO Include
-# TODOДля редиректов в обработчиках используйте именованный роутинг
+# ? Include
+# ? Для редиректов в обработчиках используйте именованный роутинг
 
 
 # !решение ментора
